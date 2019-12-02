@@ -1,0 +1,193 @@
+[
+  {
+    "_id" : "scikit-learn-linear-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Linear Regression by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Linear Models runtime"
+        ],
+        "subjects" : [
+            "linear",
+            "regression"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 0,
+    "predictionService" : "http://localhost:8002/predict/linearmodel/"
+  },
+  {
+    "_id" : "scikit-learn-tree-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Decision tree models runtime"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/treemodel/"
+  },
+  {
+    "_id" : "scikit-learn-svm-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Svm models runtime"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/svmmodel/"
+  },
+    {
+    "_id" : "scikit-learn-ensemble-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Ensemble models pretrained"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/ensemblemodel/"
+  },
+  {
+    "_id" : "scikit-learn-clustering-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Clustrerring models pretrained"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/clustermodel/"
+  },
+    {
+    "_id" : "scikit-learn-biclustering-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Biclustering models pretrained"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/biclustermodel/"
+  },
+    {
+    "_id" : "scikit-learn-naive-bayess-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Naive Bayess models pretrained"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/naivemodel/"
+  },
+  {
+    "_id" : "scikit-learn-nearest-neighbours-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "Neighbours models pretrained"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/neighboursmodel/"
+  },
+  {
+    "_id" : "scikit-learn-neural-network-model-pretrained",
+    "meta" : {
+        "descriptions" : [
+            "Decision tree by Scikit Learn python library."
+        ],
+        "titles" : [
+            "neural network pretrained"
+        ],
+        "subjects" : [
+            "regression",
+            "classification"
+        ],
+        "locked" : false
+    },
+    "ontologicalClasses" : [
+        "ot:Pretrained"
+    ],
+    "ranking" : 2,
+    "predictionService" : "http://localhost:8002/predict/neuralnetworkmodel/"
+  }
+
+
+]
