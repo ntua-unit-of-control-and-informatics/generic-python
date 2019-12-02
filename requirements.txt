@@ -1,4 +1,0 @@
-tornado
-sklearn
-numpy
-pandas
