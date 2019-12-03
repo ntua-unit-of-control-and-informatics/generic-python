@@ -1,6 +1,5 @@
 from tornado import httpserver
 from tornado import gen
-from tornado.web import asynchronous
 from tornado.gen import Task
 from tornado.ioloop import IOLoop
 import tornado.web
