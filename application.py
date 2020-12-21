@@ -10,6 +10,7 @@ from source.handlers.naivebayess import NaiveBayessModelHandler as naiveBayessMo
 from source.handlers.nearestneighbours import NearestNeighboursModelHandler as nearestNeighboursModelHandler
 from source.handlers.neuralnetwork import NeuralNetworkModelHandler as neuralNetworkModelHandler
 from source.handlers.pipeline import PipelineHandler as pipelineHandler
+from source.handlers.xgboost import XGBoostHandler as xgBoostHanlder
 
 
 class MainHandler(tornado.web.RequestHandler):
@@ -30,7 +31,8 @@ class Application(tornado.web.Application):
             (r"/predict/naivemodel/?", naiveBayessModelHandler),
             (r"/predict/neighboursmodel/?", nearestNeighboursModelHandler),
             (r"/predict/neuralnetworkmodel/?", neuralNetworkModelHandler),
-            (r"/predict/pipeline/?", pipelineHandler)
+            (r"/predict/pipeline/?", pipelineHandler),
+            (r"/predict/xgboost/?", xgBoostHanlder)
         ]
         tornado.web.Application.__init__(self, handlers)
 
