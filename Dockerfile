@@ -2,7 +2,7 @@ FROM python:3
 MAINTAINER Pantelis Karatzas <pantelispanka@gmail.com>
 
 RUN pip install --upgrade pip
-RUN pip install tornado==4.5.3
+RUN pip install tornado==4.2
 RUN pip install numpy
 RUN pip install sklearn
 RUN pip install pandas

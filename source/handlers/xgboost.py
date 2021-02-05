@@ -9,6 +9,7 @@ from ..entities.dataentry import DataEntry
 from ..helpers import model_decoder, json_to_predreq, doa_calc
 import numpy as np
 import pandas as pd
+import xgboost as xgb
 
 
 class XGBoostHandler(tornado.web.RequestHandler):
@@ -22,6 +23,7 @@ class XGBoostHandler(tornado.web.RequestHandler):
         predFeatures = pred_request.additionalInfo['predictedFeatures']
         rawModel = pred_request.rawModel[0]
         model = model_decoder.decode(rawModel)
+        cols_when_model_builds = model.get_booster().feature_names
         dataEntryAll = json_to_predreq.decode(self.request)
         doaM = []
         try:
@@ -32,7 +34,14 @@ class XGBoostHandler(tornado.web.RequestHandler):
         if type(doaM).__name__ != 'NoneType' and len(doaM) > 0:
             doaMnp = np.asarray(doaM)
             a = doa_calc.calc_doa(doaMnp, dataEntryAll)
-        predictions = model.predict(dataEntryAll)
+        # dataEntryNew = xgb.DMatrix(dataEntryAll, label=pred_request.additionalInfo['fromUser']['inputSeries'])
+        # print(dataEntryNew)
+        # if dataEntryNew[0][len(dataEntryNew) - 1] == 0:
+        #     dataEntryNew[0][len(dataEntryNew) - 1] = 0.000001
+        # dataEntryNew = np.array(dataEntryAll).reshape((1, -1))
+        dataEntryNew = np.array(dataEntryAll)
+        data = pd.DataFrame(data=dataEntryNew, columns=pred_request.additionalInfo['fromUser']['inputSeries'])
+        predictions = model.predict(data).tolist()
         preds = []
         j = 0
         for i in list(predFeatures.values()):
