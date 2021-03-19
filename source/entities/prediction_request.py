@@ -1,6 +1,10 @@
-class PredictionRequest:
+from typing import Optional, List
+from pydantic import BaseModel
+from .dataset import Dataset
 
-    def __init__(self, dataset, rawModel, additionalInfo):
-        self.dataset = dataset
-        self.rawModel = rawModel
-        self.additionalInfo = additionalInfo
+class PredictionRequest(BaseModel):
+
+    dataset : Optional[Dataset]
+    rawModel : Optional[list]
+    additionalInfo : Optional[dict]
+    doaMatrix : Optional[List[list]]

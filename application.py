@@ -1,47 +1,32 @@
-import tornado.web
-from tornado.ioloop import IOLoop
-from source.handlers.regression import LinearModelHandler as linearModelHandler
-from source.handlers.tree import TreeModelHandler as treeModelHandler
-from source.handlers.ensemble import EnsembleModelHandler as ensembleModelHandler
-from source.handlers.svm import SvmModelHandler as svmModelHandler
-from source.handlers.clustering import ClusteringModelHandler as clusteringModelHandler
-from source.handlers.biclustering import BiclusteringModelHandler as biclusteringModelHandler
-from source.handlers.naivebayess import NaiveBayessModelHandler as naiveBayessModelHandler
-from source.handlers.nearestneighbours import NearestNeighboursModelHandler as nearestNeighboursModelHandler
-from source.handlers.neuralnetwork import NeuralNetworkModelHandler as neuralNetworkModelHandler
-from source.handlers.pipeline import PipelineHandler as pipelineHandler
-from source.handlers.xgboost import XGBoostHandler as xgBoostHanlder
+import uvicorn
+
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
+from source.entities.prediction_request import PredictionRequest
+
+from source.handlers.sklearn import SKLearnHandler as sklearnHandler
 
 
-class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write('Hello, world')
+app = FastAPI(title="Generic Python API")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
-class Application(tornado.web.Application):
-    def __init__(self):
-        handlers = [
-            (r"/?", MainHandler),
-            (r"/predict/linearmodel/?", linearModelHandler),
-            (r"/predict/treemodel/?", treeModelHandler),
-            (r"/predict/ensemblemodel/?", ensembleModelHandler),
-            (r"/predict/svmmodel/?", svmModelHandler),
-            (r"/predict/clustemodel/?",clusteringModelHandler),
-            (r"/predict/biclustermodel/?", biclusteringModelHandler),
-            (r"/predict/naivemodel/?", naiveBayessModelHandler),
-            (r"/predict/neighboursmodel/?", nearestNeighboursModelHandler),
-            (r"/predict/neuralnetworkmodel/?", neuralNetworkModelHandler),
-            (r"/predict/pipeline/?", pipelineHandler),
-            (r"/predict/xgboost/?", xgBoostHanlder)
-        ]
-        tornado.web.Application.__init__(self, handlers)
+@app.post("/predict/sklearn/")
+def sklearn_model(req: PredictionRequest):
+    try:
+        resp = sklearnHandler(req['dataset'], req['rawModel'], req['additionalInfo'], req['additionalInfo'])
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    else:
+        return resp
 
-
-def main():
-    app = Application()
-    app.listen(8002)
-    print("App Starting")
-    IOLoop.instance().start()
 
 if __name__ == '__main__':
-    main()
+    uvicorn.run(app, host='0.0.0.0', port=8002)

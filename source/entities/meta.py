@@ -1,17 +1,20 @@
-class MetaInfo:
-    def __init__(self):
-        self.identifiers = None
-        self.comments = None
-        self.descriptions = None
-        self.titles = None
-        self.subjects = None
-        self.publishers = None
-        self.creators = None
-        self.contributors = None
-        self.audiences = None
-        self.rights = None
-        self.sameAs = None
-        self.seeAlso = None
-        self.hasSources = None
-        self.doi = None
-        self.date = None
+from typing import List, Optional
+from pydantic import BaseModel
+import datetime
+
+class MetaInfo(BaseModel):
+    identifiers : Optional[List[str]]
+    comments : Optional[List[str]]
+    descriptions : Optional[List[str]]
+    titles : Optional[List[str]]
+    subjects : Optional[List[str]]
+    publishers : Optional[List[str]]
+    creators : Optional[List[str]]
+    contributors : Optional[List[str]]
+    audiences : Optional[List[str]]
+    rights : Optional[List[str]]
+    sameAs : Optional[str]
+    seeAlso : Optional[str]
+    hasSources : Optional[List[str]]
+    doi : Optional[str]
+    date : Optional[datetime.datetime]

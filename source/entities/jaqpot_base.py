@@ -1,4 +1,4 @@
-class JaqpotEntity:
+from pydantic import BaseModel
 
-    def __init__(self):
-        self._id = None
+class JaqpotEntity(BaseModel):
+    _id : str

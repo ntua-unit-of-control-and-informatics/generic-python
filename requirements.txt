@@ -1,5 +1,7 @@
-tornado==4.5.3
-sklearn
+fastapi
+scikit-learn
+uvicorn
 numpy
 pandas
 xgboost
+pydantic
