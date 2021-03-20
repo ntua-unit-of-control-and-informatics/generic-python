@@ -22,6 +22,7 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/?", MainHandler),
+            (r"/predict/sklearn/?", linearModelHandler),
             (r"/predict/linearmodel/?", linearModelHandler),
             (r"/predict/treemodel/?", treeModelHandler),
             (r"/predict/ensemblemodel/?", ensembleModelHandler),
