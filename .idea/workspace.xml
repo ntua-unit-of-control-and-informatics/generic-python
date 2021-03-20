@@ -20,36 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6397276c-4b4b-431f-832c-a17a0aa3b168" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/handlers/sklearn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile_old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/dataentry.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/dataentry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/entryid.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/entryid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/error_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/error_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/feature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/featureinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/featureinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/jaqpot_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/jaqpot_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/meta.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/meta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/parameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/parameter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/prediction_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/prediction_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/entities/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/entities/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/biclustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/biclustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/ensemble.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/ensemble.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/naivebayess.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/naivebayess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/nearestneighbours.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/nearestneighbours.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/neuralnetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/neuralnetwork.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/svm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/handlers/xgboost.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/handlers/xgboost.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/helpers/doa_calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/helpers/doa_calc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,19 +1,12 @@
-FROM python:3
-MAINTAINER Pantelis Karatzas <pantelispanka@gmail.com>
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
 
-RUN pip install --upgrade pip
-RUN pip install tornado==4.2
 RUN pip install numpy
-RUN pip install sklearn==0.21.0
+RUN pip install sklearn==0.22.0
 RUN pip install pandas
-RUN pip install xgboost
 
-# Expose the ports we're interested in
 EXPOSE 8002
-
 
 ADD source /generic-python/source
 ADD application.py /generic-python/application.py
 
-CMD ["python","/generic-python/application.py"]
-
+CMD ["uvicorn", "application.py", "--host", "0.0.0.0", "--port", "8002"]
