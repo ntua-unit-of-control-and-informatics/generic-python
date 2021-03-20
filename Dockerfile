@@ -1,7 +1,9 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+FROM python:3.7
 
+RUN pip install --upgrade pip
+RUN pip install fastapi uvicorn
 RUN pip install numpy
-RUN pip install sklearn==0.22.0
+RUN pip install scikit-learn==0.21.1
 RUN pip install pandas
 
 EXPOSE 8002
