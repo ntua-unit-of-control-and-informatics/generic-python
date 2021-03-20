@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from source.entities.prediction_request import PredictionRequest
 
 from source.handlers.sklearn import SKLearnHandler as sklearnHandler
+from typing import Dict, Any
 
 
 app = FastAPI(title="Generic Python API")
@@ -18,10 +19,17 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+
 @app.post("/predict/sklearn/")
-def sklearn_model(req: PredictionRequest):
+# def sklearn_model(req: PredictionRequest):
+def sklearn_model(req: Dict[Any, Any] = None):
     try:
-        resp = sklearnHandler(req['dataset'], req['rawModel'], req['additionalInfo'], req['additionalInfo'])
+        doa_matrix = req['doaMatrix']
+    except KeyError:
+        doa_matrix = None
+    # print(req['doaMatrix'])
+    try:
+        resp = sklearnHandler(req['dataset'], req['rawModel'], req['additionalInfo'], doa_matrix)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     else:

@@ -133,3 +133,6 @@ include
 lib
 .idea
 pip-selfcheck.json
+.idea/workspace.xml
+*.xml
+.idea/workspace.xml

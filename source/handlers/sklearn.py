@@ -1,19 +1,20 @@
-from ..helpers import model_decoder, doa_calc
-
+from ..helpers import model_decoder, doa_calc, json_to_predreq
 import numpy as np
 from ..entities.dataset import Dataset
 
-def SKLearnHandler(dataset:Dataset, rawModel:list, additionalInfo:dict, doaMatrix:list = None):
+
+def SKLearnHandler(dataset: Dataset, rawModel: list, additionalInfo: dict, doaMatrix: list = None):
 
     predFeatures = additionalInfo['predictedFeatures']
-    # rawModel = rawModel[0]
+    rawModel = rawModel[0]
     model = model_decoder.decode(rawModel)
-
+    dataEntryAll = json_to_predreq.decode(dataset, additionalInfo)
     a = None
     if doaMatrix and len(doaMatrix) > 0:
         doaMnp = np.asarray(doaMatrix)
-        a = doa_calc.calc_doa(doaMnp, dataset)
-    predictions = model.predict(dataset)
+        a = doa_calc.calc_doa(doaMnp, dataEntryAll)
+
+    predictions = model.predict(dataEntryAll)
 
     preds = []
     j = 0
