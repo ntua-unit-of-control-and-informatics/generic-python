@@ -9,6 +9,6 @@ setup(name='generic-python',
       license='GNU General Public License v3.0',
       packages=['generic-python'],
       install_requires=[
-            'tornado', 'pandas'
+            'pandas'
       ],
       zip_safe=False)

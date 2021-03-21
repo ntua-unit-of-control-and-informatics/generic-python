@@ -3,9 +3,10 @@ import uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from source.entities.prediction_request import PredictionRequest
+# from .entities.prediction_request import PredictionRequest
 
-from source.handlers.sklearn import SKLearnHandler as sklearnHandler
+from .handlers.sklearn import SKLearnHandler as sklearnHandler
+# from .sklearnHandler import SKLearnHandler as sklearnHandler
 from typing import Dict, Any
 
 app = FastAPI(title="Generic Python API")
