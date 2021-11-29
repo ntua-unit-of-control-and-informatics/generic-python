@@ -3,7 +3,8 @@ FROM python:3.7
 RUN pip install --upgrade pip
 RUN pip install fastapi uvicorn
 RUN pip install numpy
-RUN pip install scikit-learn==0.24.0
+RUN pip install scikit-learn==0.20.0
+# RUN pip install xgboost==1.3.3
 RUN pip install pandas
 
 EXPOSE 8002
